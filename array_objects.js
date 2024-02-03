@@ -18,3 +18,18 @@ function arrayBuilder(one, two, three) {
 
 const simpleArr = arrayBuilder("apple", "pear", "plum");
 console.log("SimpleArr", simpleArr);
+
+var car = {};
+
+car.mileage = 98765;
+car.color = "red";
+console.log(car);
+
+car.turnKey = function () {
+  console.log("Engine running");
+};
+car.lightsOn = function () {
+  console.log("The lights are on.");
+};
+console.log("car", car.turnKey());
+console.log("car", car.lightsOn());
