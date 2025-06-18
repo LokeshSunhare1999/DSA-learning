@@ -1,13 +1,12 @@
-let arr = [5, 6, 9, 8, 7, 1, 2];
+let arr = [1,2,33,44,55,6,7,8,78, 45,7,8];
 let temp = [];
 let direction = "right";
 function leftRotate(arr, k, direction) {
+  if(direction === "right") {
+    k = arr.length - k; 
+  }
   for (let i = k; i < arr.length + k; i++) {
-    if (i < arr.length) {
-      temp.push(arr[i]);
-    } else if (i < k) {
-      temp.push(arr[i]);
-    }
+    temp.push(arr[i % arr.length]);
   }
   return temp;
 }
