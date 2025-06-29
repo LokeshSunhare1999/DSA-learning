@@ -9,7 +9,7 @@ var getRow = function(rowIndex) {
             row[j] = row[j] + row[j - 1];
         }
     }
-    
+
     return row;
 };
 console.log(getRow(3)); // Output: [1,3,3,1]
