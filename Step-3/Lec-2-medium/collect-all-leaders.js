@@ -4,10 +4,13 @@
 
 function findLeaders(arr) {
   let leaders = [];
-  for (let i =  arr.length - 1; i >= 0; i--) {
-      if(arr[i] > arr[i + 1]) {
-        leaders.push(arr[i]);
-      }
+  let maxFromRight = arr[arr.length - 1];
+  leaders.push(maxFromRight);
+  for(let i=arr.length - 2; i >=0; i--){
+    if(arr[i]> maxFromRight){
+      leaders.push(arr[i]);
+      maxFromRight = arr[i];
+    }
   }
   return leaders.reverse();
 }
