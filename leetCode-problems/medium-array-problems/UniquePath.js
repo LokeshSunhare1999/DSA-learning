@@ -14,7 +14,7 @@ var uniquePathsWithObstacles = function(obstacleGrid) {
     
     if (obstacleGrid[0][0] === 1 || obstacleGrid[m - 1][n - 1] === 1) {
         return 0; // If start or end is blocked
-    }
+    }d
     
     const dp = Array.from({ length: m }, () => Array(n).fill(0));
     dp[0][0] = 1; // Start point
